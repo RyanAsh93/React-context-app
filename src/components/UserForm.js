@@ -5,6 +5,7 @@ import { UserConsumer } from '../providers/UserProvider'
 class UserForm extends React.Component {
   state = { 
     username: this.props.username, 
+    email: this.props.email,
     avatar: this.props.avatar, 
   }
 
@@ -17,7 +18,7 @@ class UserForm extends React.Component {
 }
 
 render() {
-  const { username, avatar } = this.state
+  const { username, email, avatar } = this.state
   return (
     <Form onSubmit={this.handleSubmit}>
       <Form.Input 
@@ -25,6 +26,13 @@ render() {
         type='text'
         name='username'
         value={username}
+        onChange={this.handleChange}
+      />
+      <Form.Input 
+        label="Enter Email"
+        type='text'
+        name='email'
+        value={email}
         onChange={this.handleChange}
       />
       <Form.Select 
@@ -47,6 +55,7 @@ const ConnectedUserForm = (props) => {
         <UserForm 
           {...props}
           username={value.username}
+          email={value.email}
           avatar={value.avatar}
           updateUser={value.updateUser}
         />

@@ -8,7 +8,7 @@ const User = () => (
   <Card>
     <Card.Content>
       <Card.Header>{ value.username }</Card.Header>
-      <Card.Meta>{ value.Email }</Card.Meta>
+      <Card.Meta>{ value.email }</Card.Meta>
     </Card.Content>
     <Card.Content>
       <p>Avatar: { value.avatar }</p>

@@ -6,8 +6,8 @@ export const UserConsumer = UserContext.Consumer;
 
 class UserProvider extends React.Component {
   state = {
-    username: 'Buzz Man',
-    Email: 'Buzzbuzz@gmail.com',
+    username: 'mr. example',
+    email: 'example@gmail.com',
     avatar: 'Fire',
     updateUser: (user) => this.updateUser(user),
   }
